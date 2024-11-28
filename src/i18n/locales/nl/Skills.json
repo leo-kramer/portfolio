@@ -1,3 +1,12 @@
 {
-	"Current Skills": "Huidige Vaardigheden"
+	"Current Skills": "Huidige vaardigheden",
+	"Skills introduction": "Hier is een overzicht van mijn technische toolkit, waarmee ik in staat ben om digitale producten van hoge kwaliteit te leveren.",
+	"HTML description": "Kennis van de semantische structuur die nodig is voor zowel toegankelijkheid als leesbaarheid.",
+	"CSS description": "Vaardig in animaties, Flexbox en Grid. Ik volg een duidelijke structuur, geordend op eigenschapstype, voor betere leesbaarheid.",
+	"JavaScript description": "Gespecialiseerd in front-end JavaScript en werkt comfortabel met dataverwerking.",
+	"React description": "Zelf geleerd en heeft React voor de eerste keer toegepast om dit portfolio te bouwen.",
+	"Git description": "Kennis van command-line Git, maar ook van GitHub Desktop.",
+	"Figma description": "Mijn primaire ontwerp- en prototypingtool, wordt ook gebruikt voor het maken van iconen.",
+	"Node.JS description": "Heeft in het verleden Node.js gebruikt in combinatie met MongoDB.",
+	"Google Apps Script description": "Automatiseringen gemaakt via Google Sheets."
 }

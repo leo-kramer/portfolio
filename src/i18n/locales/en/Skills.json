@@ -1,3 +1,12 @@
 {
-	"Current Skills": "Current Skills"
+	"Current Skills": "Current Skills",
+	"Skills introduction": "Here’s a snapshot of my technical toolkit, that allows me to deliver high-quality digital products.",
+	"HTML description": "Knowledgeable in the semantic structure required for both accessibility and readability.",
+	"CSS description": "Skilled in animation, Flexbox, and Grid. I follow a clear structure, ordered by property type, for improved readability.",
+	"JavaScript description": "Specialises in front-end JavaScript and works comfortably with data processing.",
+	"React description": "Self-taught and utilised React for the first time to build this portfolio.",
+	"Git description": "Knowledgeable in command-line Git, but also GitHub Desktop.",
+	"Figma description": "My primary design and prototyping tool, also utilised for creating icons.",
+	"Node.JS description": "Has used Node.js paired with MongoDB in the past.",
+	"Google Apps Script description": "Created automations via Google Sheets."
 }
