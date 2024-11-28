@@ -47,5 +47,5 @@ html {
 }
 
 .show {
-	display: block;
+	display: flex;
 }

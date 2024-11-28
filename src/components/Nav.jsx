@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 import '../assets/css/index.css'
 import '../assets/css/nav.css'
 
-const LanguageSelection = () => {
-  const LanguageMenu = document.querySelector("header > nav > ul > li > div")
+const toggleLanguageMenu  = () => {
+  const LanguageMenu = document.querySelector("header > nav > div")
 
   LanguageMenu.classList.toggle("show")
 }
@@ -20,17 +20,22 @@ const Nav = () => {
           <li><a href="#projects">{t("Projects")}</a></li>
           <li><a href="#experience">{t("Experience")}</a></li>
           <li>
-            <button onClick={LanguageSelection}>
+            <button onClick={toggleLanguageMenu}>
               <img src="../../public/img/icon-language.svg" alt="A language icon, represented by a globe." />
-              {t("LNG")}
+              <p>{t("LNG")}</p>
               <img src="../../public/img/icon-expand.svg" alt="An expand icon, represent as a triangle facing down." />
             </button>
-            <div>
-              <button onClick={() => i18n.changeLanguage('en')}>Switch to English</button>
-              <button onClick={() => i18n.changeLanguage('nl')}>Switch to Dutch</button>
-            </div>
           </li>
         </ul>
+
+        {/* Language menu */}
+        <div>
+          <img src="../../public/img/arrow.png" />
+          <ul>
+            <li><button onClick={() => i18n.changeLanguage('en')}>English</button></li>
+            <li><button onClick={() => i18n.changeLanguage('nl')}>Nederlands</button></li>
+          </ul>
+        </div>
       </nav>
     </header>
   );

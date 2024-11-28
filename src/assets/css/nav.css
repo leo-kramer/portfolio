@@ -1,6 +1,63 @@
-header > nav {
+header {
+	position: fixed;
+	top: 2em;
+
 	display: flex;
 	justify-content: center;
+	gap: 0;
+
+	width: 100vw;
+}
+
+/* Language selection menu */
+header > nav > div {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+
+	position: relative;
+	float: right;
+	right: 1em;
+
+	min-width: 8em;
+}
+
+header > nav > div > img {
+	width: 2em;
+}
+
+header > nav > div > ul {
+	flex-direction: column;
+	gap: 0.25em;
+
+	padding: 0.5em 0.25em;
+	border-radius: 10px;
+	margin: 0;
+
+	width: 100%;
+
+	list-style-type: none;
+	background-color: var(--accent);
+}
+
+header > nav > div > ul > li > button {
+	border: none;
+	border-radius: 10px;
+	padding: 0.5em 0.25em;
+
+	width: 100%;
+
+	font-family: "Poppins";
+	font-size: 1em;
+	color: var(--text-75);
+	background: none;
+}
+
+header > nav > div > ul > li > button:hover {
+	cursor: pointer;
+
+	color: var(--text);
+	background-color: var(--background-25);
 }
 
 header > nav > ul {
@@ -10,20 +67,28 @@ header > nav > ul {
 	align-items: center;
 	gap: 1em;
 
+	margin: 0;
 	padding: 0.75em;
 	border: 2px solid var(--secondary);
 	border-radius: 1em;
 
-	width: fit-content;
-
 	list-style: none;
 
 	background-color: var(--secondary-10);
+	-webkit-backdrop-filter: blur(0.5em);
+	backdrop-filter: blur(0.5em);
 }
 
 header > nav > ul > li {
+	flex-grow: 1;
+	flex-basis: 0;
+
 	padding: 0.75em;
 	border-radius: 1em;
+
+	min-width: 8em;
+
+	text-align: center;
 }
 
 header > nav > ul > li:hover {
@@ -48,7 +113,10 @@ header > nav > ul > li > button {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: space-around;
 	gap: 0.5em;
+
+	min-width: 8em;
 }
 
 header > nav > ul > li > a:hover,
@@ -63,7 +131,9 @@ header > nav > ul > li > button > img {
 	height: 1em;
 }
 
-/* Language selection menu */
-header > nav > ul > li > div {
-	display: none;
+header > nav > ul > li > button > p {
+	margin: 0;
+
+	width: 100%;
+	text-align: left;
 }
