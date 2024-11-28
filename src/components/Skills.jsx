@@ -36,7 +36,7 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h2>{t("Current Skills")}</h2>
+      <h2>{t("Skills title")}</h2>
       <p>{t("Skills introduction")}</p>
       <div>
         {skills.map((skill, index) => (
