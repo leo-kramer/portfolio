@@ -13,7 +13,7 @@ const About = () => {
             <img src="../../public/img/pfp-1.jpg" alt="" />
             <div>
               <h1>Leo Kramer</h1>
-              <h2>Front-end Developer</h2>
+              <h3>Front-end Developer</h3>
             </div>
           </div>
           <p>📍 {t("Location")}</p>

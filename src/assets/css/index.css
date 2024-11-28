@@ -90,6 +90,12 @@ h2 {
 	font-weight: bold;
 }
 
+h3 {
+	font-size: var(--h3);
+	font-family: "Inter";
+	font-weight: bold;
+}
+
 .show {
 	display: flex;
 }
