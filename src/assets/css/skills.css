@@ -9,6 +9,10 @@
 	margin: 0;
 }
 
+#skills > h2 {
+	width: fit-content;
+}
+
 #skills > div {
 	display: flex;
 	flex-direction: row;
