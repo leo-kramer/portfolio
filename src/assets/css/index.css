@@ -157,21 +157,21 @@ main > section {
 }
 
 .github {
-	-webkit-mask-image: url("../../../public/img/icon-github.svg");
-	mask-image: url("../../../public/img/icon-github.svg");
+	-webkit-mask-image: url("/portfolio/img/icon-github.svg");
+	mask-image: url("/portfolio/img/icon-github.svg");
 }
 
 .linkedin {
-	-webkit-mask-image: url("../../../public/img/icon-linkedin.svg");
-	mask-image: url("../../../public/img/icon-linkedin.svg");
+	-webkit-mask-image: url("/portfolio/img/icon-linkedin.svg");
+	mask-image: url("/portfolio/img/icon-linkedin.svg");
 }
 
 .language {
-	-webkit-mask-image: url("../../../public/img/icon-language.svg");
-	mask-image: url("../../../public/img/icon-language.svg");
+	-webkit-mask-image: url("/portfolio/img/icon-language.svg");
+	mask-image: url("/portfolio/img/icon-language.svg");
 }
 
 .expand {
-	-webkit-mask-image: url("../../../public/img/icon-expand.svg");
-	mask-image: url("../../../public/img/icon-expand.svg");
+	-webkit-mask-image: url("/portfolio/img/icon-expand.svg");
+	mask-image: url("/portfolio/img/icon-expand.svg");
 }

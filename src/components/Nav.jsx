@@ -30,7 +30,7 @@ const Nav = () => {
 
         {/* Language menu */}
         <div>
-          <img src="../../public/img/arrow.png" />
+          <img src="../../public/arrow.png" />
           <ul>
             <li><button onClick={() => i18n.changeLanguage('en')}>English</button></li>
             <li><button onClick={() => i18n.changeLanguage('nl')}>Nederlands</button></li>

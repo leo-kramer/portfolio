@@ -6,7 +6,7 @@ import Skills from './components/Skills.jsx';
 function App() {
   return (
     <div id="app-root">
-      <h1>THIS PAGE IS A WORK IN PROGRESS</h1>
+      {/* <h1>THIS PAGE IS A WORK IN PROGRESS</h1> */}
       <Nav />
       <main>
         <About />
