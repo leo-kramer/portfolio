@@ -1,26 +1,41 @@
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
-import en from "./locales/en/Nav.json" // Import your translations
-import nl from "./locales/nl/Nav.json" // Import your translations
 
+// Fetch all translations
+const enFiles = import.meta.glob("./locales/en/*.json", { eager: true })
+const nlFiles = import.meta.glob("./locales/nl/*.json", { eager: true })
+
+const resources = {
+	en: { translation: {} },
+	nl: { translation: {} },
+}
+
+Object.values(enFiles).forEach((fileContent) => {
+	Object.assign(resources.en.translation, fileContent)
+})
+
+Object.values(nlFiles).forEach((fileContent) => {
+	Object.assign(resources.nl.translation, fileContent)
+})
+
+// Initialise i18next
 i18n
-	.use(LanguageDetector) // Detect language based on the browser settings
-	.use(initReactI18next) // Pass i18n down to React components
+	.use(LanguageDetector)
+	.use(initReactI18next)
 	.init({
-		resources: {
-			en: { translation: en }, // English translations
-			nl: { translation: nl }, // Dutch translations
-		},
-		fallbackLng: "en", // Use English if no language is detected
-		debug: true, // Enable debug mode to log useful information in the console
+		resources,
+		fallbackLng: "en",
+		debug: true,
 		interpolation: {
-			escapeValue: false, // React already escapes from XSS
+			escapeValue: false,
 		},
 		detection: {
-			order: ["navigator"], // Language detection strategy
-			caches: [], // Store the language in localStorage or cookies
+			order: ["navigator"],
+			caches: [],
 		},
 	})
+
+console.log("Loaded Resources:", i18n.store.data)
 
 export default i18n
