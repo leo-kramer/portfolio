@@ -1,0 +1,51 @@
+@font-face {
+	font-family: Poppins;
+	src: url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url(../fonts/Inter/Inter-VariableFont_opsz\wght.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	/* colours */
+	--primary: #bfa783;
+	--secondary: #5f4626;
+	--accent: #3f5033;
+	--text: #f7e6cf;
+	--background: #1c1812;
+
+	/* RGB references for opacity conversion */
+	--primary-RGB: 191, 167, 131;
+	--secondary-RGB: 95, 70, 38;
+	--accent-RGB: 63, 80, 51;
+	--text-RGB: 247, 230, 207;
+	--background-RGB: 28, 24, 18;
+
+	/* shades */
+	--primary-10: rgba(var(--primary-RGB), 0.1);
+	--primary-5: rgba(var(--primary-RGB), 0.05);
+	--primary-dark: #c2b8ab;
+	--secondary-20: rgba(var(--secondary-RGB), 0.2);
+	--secondary-20-onbg: #292116;
+	--secondary-10: rgba(var(--secondary-RGB), 0.1);
+	--secondary-5: rgba(var(--secondary-RGB), 0.05);
+	--text-75: rgba(var(--text-RGB), 0.75);
+	--background-25: rgba(var(--background-RGB), 0.25);
+}
+
+html {
+	background-color: var(--background);
+
+	font-family: "Poppins";
+	color: var(--text);
+}
+
+.show {
+	display: block;
+}
