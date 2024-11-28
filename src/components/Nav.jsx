@@ -21,10 +21,10 @@ const Nav = () => {
           <li><a href="#experience">{t("Experience")}</a></li>
           <li>
             <button onClick={toggleLanguageMenu}>
-              <img src="../../public/img/icon-language.svg" alt="A language icon, represented by a globe." />
+              <div className="svg-mask language"></div>
               <p>{t("LNG")}</p>
-              <img src="../../public/img/icon-expand.svg" alt="An expand icon, represent as a triangle facing down." />
-            </button>
+              <div className="svg-mask expand"></div>
+              </button>
           </li>
         </ul>
 

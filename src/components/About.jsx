@@ -6,14 +6,14 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about">
+    <section>
       <section>
         <section>
           <div>
-            <img src='' />
+            <img src="../../public/img/pfp-1.jpg" alt="" />
             <div>
-              <p>Leo Kramer</p>
-              <p>Front-end Developer</p>
+              <h1>Leo Kramer</h1>
+              <h2>Front-end Developer</h2>
             </div>
           </div>
           <p>📍 {t("Location")}</p>
@@ -22,9 +22,15 @@ const About = () => {
         <p>{t("Tagline")}</p>
 
         <ul>
-          <li><button>Download CV</button></li>
-          <li><link><img src='' /></link></li>
-          <li><link><img src='' /></link></li>
+          <li><button className='primary'>Download CV</button></li>
+          <li>
+            <a target="_blank">
+              <div className="svg-mask github"></div>
+            </a>
+            <a target="_blank">
+              <div className="svg-mask linkedin"></div>
+            </a>
+          </li>
         </ul>
 
       </section>

@@ -123,12 +123,18 @@ header > nav > ul > li > a:hover,
 header > nav > ul > li > button:hover {
 	cursor: pointer;
 
-	color: var(--text);
+	color: var(--text) !important;
 }
 
-header > nav > ul > li > button > img {
-	width: 1em;
+header > nav > ul > li > button > div {
 	height: 1em;
+	aspect-ratio: 1/1;
+
+	color: var(--text-75);
+}
+
+header > nav > ul > li > button:hover > div {
+	color: var(--text);
 }
 
 header > nav > ul > li > button > p {
