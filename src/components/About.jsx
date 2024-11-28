@@ -24,29 +24,25 @@ const About = () => {
         <ul>
           <li><button className='primary'>Download CV</button></li>
           <li>
-            <a target="_blank">
+            <a href="https://github.com/leo-kramer" target="_blank">
               <div className="svg-mask github"></div>
             </a>
-            <a target="_blank">
+            <a href="https://www.linkedin.com/in/leo-kramer/" target="_blank">
               <div className="svg-mask linkedin"></div>
             </a>
           </li>
         </ul>
-
       </section>
-        <p>{t("Contact")}</p>
-        <table>
-          <tr>
-            <td>{t("E-mail")}</td>
-            <td><a>leokramer17@gmail.com</a></td>
-          </tr>
-          <tr>
-            <td>{t("Phone")}</td>
-            <td><a>06 45 92 10 49</a></td>
-          </tr>
-        </table>
-      <section>
 
+      <section>
+        <h3>{t("Contact")}</h3>
+        <div>
+          <p>{t("E-mail")}</p>
+          <a href="mailto:leokramer17@gmail.com" target="_blank">leokramer17@gmail.com</a>
+
+          <p>{t("Phone")}</p>
+          <a href="tel:0645921049" target="_blank">06 45 92 10 49</a>
+        </div>
       </section>
     </section>
   );
