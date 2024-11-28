@@ -4,8 +4,7 @@ import '../assets/css/nav.css'
 
 const toggleLanguageMenu  = () => {
   const LanguageMenu = document.querySelector("header > nav > div")
-
-  LanguageMenu.classList.toggle("show")
+  LanguageMenu.classList.toggle("show-flex")
 }
 
 const Nav = () => {

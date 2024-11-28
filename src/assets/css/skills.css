@@ -1,0 +1,75 @@
+#skills {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+#skills > h2,
+#skills > p {
+	margin: 0;
+}
+
+#skills > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+}
+
+#skills > div > div {
+	width: 17.5em;
+}
+
+#skills > div > div p {
+	margin: 0;
+}
+
+#skills > div > div > button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5em;
+
+	padding: 0.5em;
+	border: none;
+	border-radius: 10px 10px;
+
+	width: 100%;
+
+	background-color: var(--primary-5);
+}
+
+#skills > div > div > button:hover {
+	cursor: pointer;
+
+	background-color: var(--primary-10);
+}
+
+.button-border-radius-description {
+	border-radius: 10px 10px 0 0 !important;
+}
+
+#skills > div > div > button > img {
+	width: 2.75em;
+	height: 2.75em;
+	object-fit: contain;
+}
+
+#skills > div > div > button > p {
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--text);
+}
+
+#skills > div > div > div {
+	display: none;
+
+	border-radius: 0 0 10px 10px;
+
+	background-color: var(--secondary-5);
+}
+
+#skills > div > div > div > p {
+	padding: 0.5em 1em;
+}
