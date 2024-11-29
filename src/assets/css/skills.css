@@ -60,6 +60,15 @@
 	object-fit: contain;
 
 	border-radius: 5px;
+	filter: contrast(75%) sepia(100%);
+}
+
+.skill-card > button:hover > img {
+	filter: none;
+}
+
+.no-filter {
+	filter: none !important;
 }
 
 .skill-card > button > p {

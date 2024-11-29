@@ -3,15 +3,18 @@ import PropTypes from "prop-types"
 import "../assets/css/index.css"
 import "../assets/css/skills.css"
 
-const toggleDescription = (e) => {
-	const Button = e.target
+const toggleDescription = (event) => {
+	const Button = event.currentTarget
+	const Logo = Button.querySelector("img")
 	const Parent = Button.closest("div")
 	const Description = Parent.querySelector("div")
 	Description.classList.toggle("show")
 
 	if (Description.classList.contains("show")) {
+		Logo.classList.add("no-filter")
 		Button.classList.add("button-border-radius-description")
 	} else {
+		Logo.classList.remove("no-filter")
 		Button.classList.remove("button-border-radius-description")
 	}
 }
