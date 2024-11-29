@@ -7,8 +7,13 @@ const toggleDescription = (e) => {
   const Button = e.target
   const Parent = Button.closest("div");
   const Description = Parent.querySelector("div");
-  Button.classList.toggle("button-border-radius-description")
   Description.classList.toggle("show")
+
+  if (Description.classList.contains("show")) {
+    Button.classList.add("button-border-radius-description")
+  } else {
+    Button.classList.remove("button-border-radius-description")
+  }
 }
 
 const SkillCard = ({ logo, name, description }) => {

@@ -131,6 +131,7 @@ main > section {
 	font-weight: bold;
 	color: var(--background);
 	font-size: 1em;
+	text-decoration: none;
 	background-image: var(--primary-gradient-secondary);
 }
 

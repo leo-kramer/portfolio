@@ -22,7 +22,7 @@ const About = () => {
         <p>{t("Tagline")}</p>
 
         <ul>
-          <li><button className='primary'>Download CV</button></li>
+          <li><a className='primary' href="/portfolio/LeoKramerCV.pdf" download>Download CV</a></li>
           <li>
             <a href="https://github.com/leo-kramer" target="_blank">
               <div className="svg-mask github"></div>
