@@ -21,15 +21,15 @@
 	justify-content: center;
 }
 
-#skills > div > div {
+.skill-card {
 	width: 17.5em;
 }
 
-#skills > div > div p {
+.skill-card p {
 	margin: 0;
 }
 
-#skills > div > div > button {
+.skill-card > button {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -44,7 +44,7 @@
 	background-color: var(--primary-5);
 }
 
-#skills > div > div > button:hover {
+.skill-card > button:hover {
 	cursor: pointer;
 
 	background-color: var(--primary-10);
@@ -54,19 +54,19 @@
 	border-radius: 10px 10px 0 0 !important;
 }
 
-#skills > div > div > button > img {
+.skill-card > button > img {
 	width: 2.75em;
 	height: 2.75em;
 	object-fit: contain;
 }
 
-#skills > div > div > button > p {
+.skill-card > button > p {
 	font-size: 18px;
 	font-weight: bold;
 	color: var(--text);
 }
 
-#skills > div > div > div {
+.skill-card > div {
 	display: none;
 
 	border-radius: 0 0 10px 10px;
@@ -74,6 +74,6 @@
 	background-color: var(--secondary-5);
 }
 
-#skills > div > div > div > p {
+.skill-card > div > p {
 	padding: 0.5em 1em;
 }

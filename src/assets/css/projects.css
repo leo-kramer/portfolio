@@ -1,48 +1,12 @@
-main
-	> section:last-of-type
-	> section:nth-of-type(2)
-	> div
-	> div
-	> div
-	> ul:last-of-type
-	> li:first-of-type
-	> a
-	> div,
-main
-	> section:last-of-type
-	> section:nth-of-type(2)
-	> div
-	> div
-	> div
-	> ul:last-of-type
-	> li:last-of-type
-	> a
-	> div {
+.project-card > div > ul:last-of-type > li:first-of-type > a > div,
+.project-card > div > ul:last-of-type > li:last-of-type > a > div {
 	height: 1em;
 	aspect-ratio: 1/1;
 	color: var(--text-75);
 }
 
-main
-	> section:last-of-type
-	> section:nth-of-type(2)
-	> div
-	> div
-	> div
-	> ul:last-of-type
-	> li:first-of-type
-	> a:hover
-	> div,
-main
-	> section:last-of-type
-	> section:nth-of-type(2)
-	> div
-	> div
-	> div
-	> ul:last-of-type
-	> li:last-of-type
-	> a:hover
-	> div {
+.project-card > div > ul:last-of-type > li:first-of-type > a:hover > div,
+.project-card > div > ul:last-of-type > li:last-of-type > a:hover > div {
 	transform: scale(1.1);
 	color: var(--text);
 }

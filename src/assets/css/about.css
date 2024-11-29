@@ -4,6 +4,10 @@ main > section:first-of-type {
 	gap: 2em;
 	flex-grow: 1;
 	flex-basis: 50%;
+
+	position: sticky;
+	top: 8em;
+	align-self: flex-start;
 }
 
 main > section:first-of-type > section:first-of-type > section > div {
