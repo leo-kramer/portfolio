@@ -48,7 +48,7 @@ header > nav > div > ul > li > button {
 
 	width: 100%;
 
-	font-family: "Poppins";
+	font-family: var(--default);
 	font-size: 1em;
 	color: var(--text-75);
 	background: none;
@@ -103,7 +103,7 @@ header > nav > ul > li > button {
 
 	border: none;
 
-	font-family: "Poppins";
+	font-family: var(--default);
 	font-size: 1em;
 	text-decoration: none;
 	color: var(--text-75);

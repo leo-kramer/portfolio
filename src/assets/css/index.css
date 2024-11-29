@@ -57,7 +57,7 @@
 	--text-75: rgba(var(--text-RGB), 0.75);
 	--background-25: rgba(var(--background-RGB), 0.25);
 
-	/* FONT SIZES */
+	/* FONT */
 	--p: 1em;
 	--h6: calc(var(--p) * 1.25);
 	--h5: calc(var(--h6) * 1.25);
@@ -65,12 +65,16 @@
 	--h3: calc(var(--h4) * 1.25);
 	--h2: calc(var(--h3) * 1.25);
 	--h1: calc(var(--h2) * 1.25);
+
+	--default: "Poppins", system-ui, sans-serif;
+	--headers: "Inter", Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+		sans-serif;
 }
 
 html {
 	background-color: var(--background);
 
-	font-family: "Poppins";
+	font-family: var(--default);
 	color: var(--text);
 }
 
@@ -80,25 +84,25 @@ h1 {
 	background-clip: text;
 	color: transparent;
 	font-size: var(--h1);
-	font-family: "Inter";
+	font-family: var(--headers);
 	font-weight: bold;
 }
 
 h2 {
 	font-size: var(--h2);
-	font-family: "Inter";
+	font-family: var(--headers);
 	font-weight: bold;
 }
 
 h3 {
 	font-size: var(--h3);
-	font-family: "Inter";
+	font-family: var(--headers);
 	font-weight: bold;
 }
 
 h5 {
 	font-size: var(--h5);
-	font-family: "Inter";
+	font-family: var(--headers);
 	font-weight: bold;
 }
 
@@ -153,7 +157,7 @@ main > section {
 	border: none;
 	border-radius: 10px;
 	padding: 0.5em 1em;
-	font-family: "Poppins";
+	font-family: var(--default);
 	font-weight: bold;
 	color: var(--background);
 	font-size: 1em;
