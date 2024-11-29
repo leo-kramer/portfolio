@@ -1,16 +1,31 @@
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import "../assets/css/index.css"
 import "../assets/css/about.css"
 
 const About = () => {
 	const { t } = useTranslation()
+	const [count, setCount] = useState(1)
 
 	return (
 		<section>
 			<section>
 				<section>
 					<div>
-						<img src="/portfolio/img/pfp-1.jpg" alt={t("About img alt text")} />
+						<button
+							onClick={() => {
+								if (count === 3) {
+									setCount(1)
+								} else {
+									setCount(count + 1)
+								}
+							}}
+						>
+							<img
+								src={`/portfolio/img/pfp-${count}.jpg`}
+								alt={t(`About img${count} alt text`)}
+							/>
+						</button>
 						<div>
 							<h1>Leo Kramer</h1>
 							<h3>Front-end Developer</h3>

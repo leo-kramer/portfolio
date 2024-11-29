@@ -6,6 +6,7 @@ main > section:last-of-type > section:last-of-type > div {
 	padding: 0.5em;
 
 	background-color: var(--secondary-20-onbg);
+	box-shadow: 0 0 10em var(--primary);
 }
 
 main > section:last-of-type > section:last-of-type > div > button {
