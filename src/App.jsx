@@ -10,7 +10,6 @@ import Education from './components/Education.jsx';
 function App() {
   return (
     <div id="app-root">
-      {/* <h1>THIS PAGE IS A WORK IN PROGRESS</h1> */}
       <Nav />
       <main>
         <About />
