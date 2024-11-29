@@ -41,6 +41,10 @@ header > nav > div > ul {
 	background-color: var(--accent);
 }
 
+header > nav > div > ul > li {
+	padding: 0;
+}
+
 header > nav > div > ul > li > button {
 	border: none;
 	border-radius: 10px;

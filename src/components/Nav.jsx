@@ -1,14 +1,46 @@
+import { useRef, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import "../assets/css/index.css"
 import "../assets/css/nav.css"
 
-const toggleLanguageMenu = () => {
-	const LanguageMenu = document.querySelector("header > nav > div")
-	LanguageMenu.classList.toggle("show-flex")
-}
-
 const Nav = () => {
 	const { t, i18n } = useTranslation()
+	const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
+	const languageMenuRef = useRef(null)
+
+	const toggleLanguageMenu = () => {
+		setIsLanguageMenuOpen(true)
+	}
+
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			const LanguageMenu = languageMenuRef.current
+
+			if (LanguageMenu && !LanguageMenu.contains(event.target)) {
+				setIsLanguageMenuOpen(false)
+			}
+		}
+
+		// Delay useEffect operations to allow setIsLanguageMenuOpen to update
+		const timeoutId = setTimeout(() => {
+			if (isLanguageMenuOpen) {
+				document.addEventListener("click", handleClickOutside)
+			} else {
+				document.removeEventListener("click", handleClickOutside)
+			}
+		}, 50)
+
+		return () => {
+			clearTimeout(timeoutId)
+			document.removeEventListener("click", handleClickOutside)
+		}
+	}, [isLanguageMenuOpen])
+
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng)
+		const LanguageMenu = languageMenuRef.current
+		LanguageMenu.classList.remove("show-flex")
+	}
 
 	return (
 		<header>
@@ -36,14 +68,17 @@ const Nav = () => {
 				</ul>
 
 				{/* Language menu */}
-				<div>
+				<div
+					ref={languageMenuRef}
+					className={isLanguageMenuOpen ? "show-flex" : ""}
+				>
 					<img src="/portfolio/img/arrow.png" />
 					<ul>
 						<li>
-							<button onClick={() => i18n.changeLanguage("en")}>English</button>
+							<button onClick={() => changeLanguage("en")}>English</button>
 						</li>
 						<li>
-							<button onClick={() => i18n.changeLanguage("nl")}>Nederlands</button>
+							<button onClick={() => changeLanguage("nl")}>Nederlands</button>
 						</li>
 					</ul>
 				</div>
