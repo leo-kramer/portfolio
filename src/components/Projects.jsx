@@ -24,6 +24,8 @@ DeliverableLi.propTypes = {
 }
 
 const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="project-card">
       <img src={img} alt=""/>
@@ -48,17 +50,17 @@ const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
         <ul>
           {code && code.trim() !== "" && (
             <li>
-              <a href={code}>
+              <a href={code} target="_blank">
                 <div className="svg-mask github"></div>
-                View code
+                {t("View code")}
               </a>
             </li>
           )}
           {demo && demo.trim() !== "" && (
             <li>
-              <a href={demo}>
+              <a href={demo} target="_blank">
                 <div className="svg-mask share"></div>
-                Live demo
+                {t("Live demo")}
               </a>
             </li>
           )}
@@ -95,7 +97,7 @@ const Projects = () => {
       deliverables: t("Avatar deliverables", { returnObjects: true }),
       skills: [ "HTML", "CSS", "JavaScript" ],
       code: "https://github.com/leo-kramer/avatar-game",
-      demo: "leo-kramer.github.io/avatar-game/",
+      demo: "https://leo-kramer.github.io/avatar-game/",
     },
   ]
 

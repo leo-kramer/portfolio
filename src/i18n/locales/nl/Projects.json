@@ -10,5 +10,7 @@
 		"Gecodeerd vanaf nul met pure HTML/CSS/JavaScript.",
 		"Alle gebruikte assets zelf gemaakt.",
 		"Heeft session storage gebruikt."
-	]
+	],
+	"View code": "Zie code",
+	"Live demo": "Live demo"
 }

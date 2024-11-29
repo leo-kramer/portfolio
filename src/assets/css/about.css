@@ -49,6 +49,10 @@ main > section:first-of-type > section:first-of-type > ul {
 	list-style-type: none;
 }
 
+main > section:first-of-type > section:first-of-type > li {
+	padding: 0;
+}
+
 main > section:first-of-type > section:first-of-type > ul > li:last-of-type {
 	display: flex;
 	flex-direction: row;

@@ -115,7 +115,7 @@ a:hover {
 
 ul {
 	list-style-type: "-";
-	padding: 0;
+	padding-left: 0.5em;
 }
 
 li {

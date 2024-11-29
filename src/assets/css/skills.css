@@ -58,6 +58,8 @@
 	width: 2.75em;
 	height: 2.75em;
 	object-fit: contain;
+
+	border-radius: 5px;
 }
 
 .skill-card > button > p {
