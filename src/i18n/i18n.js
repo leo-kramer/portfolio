@@ -10,17 +10,20 @@ import enNav from "./locales/en/Nav.json"
 import enAbout from "./locales/en/About.json"
 import enSkills from "./locales/en/Skills.json"
 import enProjects from "./locales/en/Projects.json"
+import enExperience from "./locales/en/Experience.json"
 
 import nlNav from "./locales/nl/Nav.json"
 import nlAbout from "./locales/nl/About.json"
 import nlSkills from "./locales/nl/Skills.json"
 import nlProjects from "./locales/nl/Projects.json"
+import nlExperience from "./locales/nl/Experience.json"
 
 const enTranslations = {
 	...enNav,
 	...enAbout,
 	...enSkills,
 	...enProjects,
+	...enExperience,
 }
 
 const nlTranslations = {
@@ -28,6 +31,7 @@ const nlTranslations = {
 	...nlAbout,
 	...nlSkills,
 	...nlProjects,
+	...nlExperience,
 }
 
 const resources = {
