@@ -1,0 +1,31 @@
+main > section:last-of-type > section:last-of-type > div {
+	display: flex;
+
+	margin: 2em 0 1em 0;
+	border-radius: 10px;
+	padding: 0.5em;
+
+	background-color: var(--secondary-20-onbg);
+}
+
+main > section:last-of-type > section:last-of-type > div > button {
+	flex-basis: 50%;
+	border: none;
+	border-radius: 10px;
+	padding: 0.25em;
+
+	font-family: "Inter";
+	font-size: var(--h3);
+	color: var(--text);
+	background-color: var(--secondary);
+}
+
+main > section:last-of-type > section:last-of-type > div > button:hover {
+	cursor: pointer;
+	color: var(--background);
+}
+
+main > section:last-of-type > section:last-of-type > div > button.active {
+	color: var(--background);
+	background-color: var(--primary);
+}

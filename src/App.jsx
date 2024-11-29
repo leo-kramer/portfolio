@@ -3,9 +3,7 @@ import Nav from './components/Nav.jsx';
 import About from './components/About.jsx';
 import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
-import Experience from './components/Experience.jsx';
-import Education from './components/Education.jsx';
-
+import ExpEduMenu from './components/ExpEduMenu.jsx';
 
 function App() {
   return (
@@ -16,8 +14,7 @@ function App() {
         <section>
           <Skills />
           <Projects />
-          <Experience />
-          <Education />
+          <ExpEduMenu />
         </section>
       </main>
     </div>
