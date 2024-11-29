@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { SkillTag, DeliverableLi } from './Cards.jsx';
 import '../assets/css/index.css'
-import '../assets/css/experience.css'
+import '../assets/css/exp-edu.css'
 
-const ExperienceCard = ({ img, job, company, location, date, deliverables, skills }) => {
+const ExperienceCard = ({ logo, job, company, location, date, deliverables, skills }) => {
   return (
     <div className="experience-card">
       <div>
-        <img src={img} />
+        <img src={logo} />
         <div>
           <h5>{job}</h5>
           <p>{company} - {location}</p>
@@ -36,7 +36,7 @@ const ExperienceCard = ({ img, job, company, location, date, deliverables, skill
 }
 
 ExperienceCard.propTypes = {
-  img: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -50,7 +50,7 @@ const Experience = () => {
 
   const experiences = [
     {
-      img: "/portfolio/img/logo-chesterfield.png",
+      logo: "/portfolio/img/logo-chesterfield.png",
       job: t("Chesterfield job"),
       company: "Chesterfield Media",
       location: "Groningen",
@@ -59,7 +59,7 @@ const Experience = () => {
       skills: [ "Google Apps Script", "JavaScript", "REST APIs" ],
     },
     {
-      img: "/portfolio/img/logo-lyceo.png",
+      logo: "/portfolio/img/logo-lyceo.png",
       job: t("Lyceo job"),
       company: "Lyceo",
       location: "Leiden",
@@ -74,7 +74,7 @@ const Experience = () => {
       {experiences.map((experience, index) => (
         <ExperienceCard
           key={index}
-          img={experience.img}
+          logo={experience.logo}
           job={experience.job}
           company={experience.company}
           location={experience.location}

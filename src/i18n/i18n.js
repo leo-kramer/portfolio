@@ -11,12 +11,14 @@ import enAbout from "./locales/en/About.json"
 import enSkills from "./locales/en/Skills.json"
 import enProjects from "./locales/en/Projects.json"
 import enExperience from "./locales/en/Experience.json"
+import enEducation from "./locales/en/Education.json"
 
 import nlNav from "./locales/nl/Nav.json"
 import nlAbout from "./locales/nl/About.json"
 import nlSkills from "./locales/nl/Skills.json"
 import nlProjects from "./locales/nl/Projects.json"
 import nlExperience from "./locales/nl/Experience.json"
+import nlEducation from "./locales/nl/Education.json"
 
 const enTranslations = {
 	...enNav,
@@ -24,6 +26,7 @@ const enTranslations = {
 	...enSkills,
 	...enProjects,
 	...enExperience,
+	...enEducation,
 }
 
 const nlTranslations = {
@@ -32,6 +35,7 @@ const nlTranslations = {
 	...nlSkills,
 	...nlProjects,
 	...nlExperience,
+	...nlEducation,
 }
 
 const resources = {
