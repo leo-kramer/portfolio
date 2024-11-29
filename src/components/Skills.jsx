@@ -17,10 +17,12 @@ const toggleDescription = (e) => {
 }
 
 const SkillCard = ({ logo, name, description }) => {
+	const { t } = useTranslation()
+
 	return (
 		<div className="skill-card">
 			<button onClick={toggleDescription}>
-				<img src={logo} alt={`The logo of ${name}.`} />
+				<img src={logo} alt={`${t("Logo alt text")} ${name}.`} />
 				<p>{name}</p>
 			</button>
 			<div>

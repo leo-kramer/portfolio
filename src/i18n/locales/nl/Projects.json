@@ -1,11 +1,13 @@
 {
 	"Projects title": "Projecten",
+	"SandScript alt text": "Een fles met een brief erin. Daarachter is een tropisch eiland en een donkerblauwe lucht. De stijl is enigszins cartoonesk, zonder lijntekeningen.",
 	"SandScript deliverables": [
 		"Onderhield de wiki en was leider van het groepsgedeelte van het project.",
 		"Bedenker van het initiële concept.",
 		"Mogelijkheid gecreëerd om drafts van gebruikers op te slaan, bewerken en verwijderen.",
 		"Ontwikkelde de front-end en de assets die in het uiteindelijke product werden gebruikt."
 	],
+	"Avatar alt text": "Links een man met een knotje terwijl hij zijn linkerarm uitstrekt en zijn rechterarm dicht bij zijn zijde houdt. Rechts wordt met rode lijnen een vuureffect gecreëerd, het vuur komt uit de linkerhand van de man. Achter hem is een achtergrond van bestrating en lucht. De hele tekening heeft een gele toon.",
 	"Avatar deliverables": [
 		"Gecodeerd vanaf nul met pure HTML/CSS/JavaScript.",
 		"Alle gebruikte assets zelf gemaakt.",

@@ -4,10 +4,12 @@ import "../assets/css/index.css"
 import "../assets/css/exp-edu.css"
 
 const EducationCard = ({ logo, study, school, location, date }) => {
+	const { t } = useTranslation()
+
 	return (
 		<div className="education-card">
 			<div>
-				<img src={logo} alt={`The logo of ${school}.`} />
+				<img src={logo} alt={`${t("Logo alt text")} ${school}.`} />
 				<div>
 					<h5>{study}</h5>
 					<p>

@@ -13,10 +13,12 @@ const ExperienceCard = ({
 	deliverables,
 	skills,
 }) => {
+	const { t } = useTranslation()
+
 	return (
 		<div className="experience-card">
 			<div>
-				<img src={logo} alt={`The logo of ${company}.`} />
+				<img src={logo} alt={`${t("Logo alt text")} ${company}.`} />
 				<div>
 					<h5>{job}</h5>
 					<p>
