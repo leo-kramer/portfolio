@@ -20,7 +20,7 @@ const SkillCard = ({ logo, name, description }) => {
 	return (
 		<div className="skill-card">
 			<button onClick={toggleDescription}>
-				<img src={logo} alt="" />
+				<img src={logo} alt={`The logo of ${name}.`} />
 				<p>{name}</p>
 			</button>
 			<div>

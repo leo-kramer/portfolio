@@ -4,12 +4,20 @@ import { SkillTag, DeliverableLi } from "./Cards.jsx"
 import "../assets/css/index.css"
 import "../assets/css/projects.css"
 
-const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
+const ProjectCard = ({
+	img,
+	imgAlt,
+	name,
+	deliverables,
+	skills,
+	code,
+	demo,
+}) => {
 	const { t } = useTranslation()
 
 	return (
 		<div className="project-card">
-			<img src={img} alt="" />
+			<img src={img} alt={imgAlt} />
 			<div>
 				<h5>{name}</h5>
 				<ul>
@@ -47,6 +55,7 @@ const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
 
 ProjectCard.propTypes = {
 	img: PropTypes.string.isRequired,
+	imgAlt: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	deliverables: PropTypes.array.isRequired,
 	skills: PropTypes.array.isRequired,
@@ -60,6 +69,7 @@ const Projects = () => {
 	const projects = [
 		{
 			img: "/portfolio/img/project-sandscript.png",
+			imgAlt: t("SandScript alt text"),
 			name: "SandScript",
 			deliverables: t("SandScript deliverables", { returnObjects: true }),
 			skills: ["HTML", "CSS", "JavaScript", "Git", "Node.JS"],
@@ -68,6 +78,7 @@ const Projects = () => {
 		},
 		{
 			img: "/portfolio/img/project-avatar.png",
+			imgAlt: t("Avatar alt text"),
 			name: "Avatar: The Game",
 			deliverables: t("Avatar deliverables", { returnObjects: true }),
 			skills: ["HTML", "CSS", "JavaScript"],
@@ -84,6 +95,7 @@ const Projects = () => {
 					<ProjectCard
 						key={index}
 						img={project.img}
+						imgAlt={project.imgAlt}
 						name={project.name}
 						deliverables={project.deliverables}
 						skills={project.skills}

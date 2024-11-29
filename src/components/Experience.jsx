@@ -16,7 +16,7 @@ const ExperienceCard = ({
 	return (
 		<div className="experience-card">
 			<div>
-				<img src={logo} />
+				<img src={logo} alt={`The logo of ${company}.`} />
 				<div>
 					<h5>{job}</h5>
 					<p>

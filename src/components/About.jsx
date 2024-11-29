@@ -10,7 +10,10 @@ const About = () => {
 			<section>
 				<section>
 					<div>
-						<img src="/portfolio/img/pfp-1.jpg" alt="" />
+						<img
+							src="/portfolio/img/pfp-1.jpg"
+							alt="Leo sitting down on the right-hand side of the photo. He is looking towards the horizon. Behind him is a tree. On the left-hand side is a view of a green hilly landscape."
+						/>
 						<div>
 							<h1>Leo Kramer</h1>
 							<h3>Front-end Developer</h3>

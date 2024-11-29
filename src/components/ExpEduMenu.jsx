@@ -1,6 +1,5 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-// import PropTypes from 'prop-types';
 import Experience from "./Experience.jsx"
 import Education from "./Education.jsx"
 import "../assets/css/index.css"

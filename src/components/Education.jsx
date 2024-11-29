@@ -7,7 +7,7 @@ const EducationCard = ({ logo, study, school, location, date }) => {
 	return (
 		<div className="education-card">
 			<div>
-				<img src={logo} />
+				<img src={logo} alt={`The logo of ${school}.`} />
 				<div>
 					<h5>{study}</h5>
 					<p>
