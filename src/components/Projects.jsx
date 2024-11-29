@@ -1,0 +1,116 @@
+import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
+import '../assets/css/index.css'
+import '../assets/css/projects.css'
+
+const SkillTag = ({ skill }) => {
+  return (
+    <li className="tag">{skill}</li>
+  )
+}
+
+SkillTag.propTypes = {
+  skill: PropTypes.string.isRequired
+}
+
+const DeliverableLi = ({ deliverable }) => {
+  return (
+    <li>{deliverable}</li>
+  )
+}
+
+DeliverableLi.propTypes = {
+  deliverable: PropTypes.string.isRequired
+}
+
+const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
+  return (
+    <div className="project-card">
+      <img src={img} alt=""/>
+      <div>
+        <h5>{name}</h5>
+        <ul>
+          {deliverables.map((deliverable, index) => (
+            <DeliverableLi
+              key={index}
+              deliverable={deliverable}
+            />
+          ))}
+        </ul>
+        <ul>
+          {skills.map((skill, index) => (
+            <SkillTag
+              key={index}
+              skill={skill}
+            />
+          ))}
+        </ul>
+        <ul>
+          {code && code.trim() !== "" && (
+            <li>
+              <a href={code}>View code</a>
+            </li>
+          )}
+          {demo && demo.trim() !== "" && (
+            <li>
+              <a href={demo}>Live demo</a>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+ProjectCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  deliverables: PropTypes.array.isRequired,
+  skills: PropTypes.array.isRequired,
+  code: PropTypes.string,
+  demo: PropTypes.string,
+};
+
+const Projects = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      img: "/portfolio/img/project-sandscript.png",
+      name: "SandScript",
+      deliverables: t("SandScript deliverables", { returnObjects: true }),
+      skills: [ "HTML", "CSS", "JavaScript", "Git", "Node.JS" ],
+      code: "https://github.com/leo-kramer/SandScript",
+      demo: "",
+    },
+    {
+      img: "/portfolio/img/project-avatar.png",
+      name: "Avatar: The Game",
+      deliverables: t("Avatar deliverables", { returnObjects: true }),
+      skills: [ "HTML", "CSS", "JavaScript" ],
+      code: "https://github.com/leo-kramer/avatar-game",
+      demo: "leo-kramer.github.io/avatar-game/",
+    },
+  ]
+
+  return (
+    <section id="projects">
+      <h2>{t("Projects title")}</h2>
+      <div>
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            img={project.img}
+            name={project.name}
+            deliverables={project.deliverables}
+            skills={project.skills}
+            code={project.code}
+            demo={project.demo}
+          />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default Projects;

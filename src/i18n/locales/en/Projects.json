@@ -1,0 +1,14 @@
+{
+	"Projects title": "Projects",
+	"SandScript deliverables": [
+		"Maintained the wiki and was leader of the group portion of the project.",
+		"Came up with the initial concept.",
+		"Allowed for saving, editing, and deleting drafts made by the user.",
+		"Developed the front-end and assets used in the final product."
+	],
+	"Avatar deliverables": [
+		"Coded from scratch using pure HTML/CSS/JavaScript.",
+		"Created all assets used.",
+		"Utilised session storage."
+	]
+}

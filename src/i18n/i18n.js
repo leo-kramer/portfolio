@@ -9,21 +9,25 @@ import LanguageDetector from "i18next-browser-languagedetector"
 import enNav from "./locales/en/Nav.json"
 import enAbout from "./locales/en/About.json"
 import enSkills from "./locales/en/Skills.json"
+import enProjects from "./locales/en/Projects.json"
 
 import nlNav from "./locales/nl/Nav.json"
 import nlAbout from "./locales/nl/About.json"
 import nlSkills from "./locales/nl/Skills.json"
+import nlProjects from "./locales/nl/Projects.json"
 
 const enTranslations = {
 	...enNav,
 	...enAbout,
 	...enSkills,
+	...enProjects,
 }
 
 const nlTranslations = {
 	...nlNav,
 	...nlAbout,
 	...nlSkills,
+	...nlProjects,
 }
 
 const resources = {

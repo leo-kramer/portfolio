@@ -14,7 +14,7 @@ const Nav = () => {
     <header>
       <nav>
         <ul>
-          <li><a href="#root">{t("Home")}</a></li>
+          <li><a href="#top">{t("Home")}</a></li>
           <li><a href="#skills">{t("Skills")}</a></li>
           <li><a href="#projects">{t("Projects")}</a></li>
           <li><a href="#experience">{t("Experience")}</a></li>
