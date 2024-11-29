@@ -1,9 +1,10 @@
 import { useRef, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
+import PropTypes from "prop-types"
 import "../assets/css/index.css"
 import "../assets/css/nav.css"
 
-const Nav = () => {
+const Nav = ({ activeSection }) => {
 	const { t, i18n } = useTranslation()
 	const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
 	const languageMenuRef = useRef(null)
@@ -55,8 +56,13 @@ const Nav = () => {
 					<li>
 						<a href="#projects">{t("Projects")}</a>
 					</li>
-					<li>
+					{/* <li>
 						<a href="#experience">{t("Experience")}</a>
+					</li> */}
+					<li>
+						<a href={`#${activeSection}`}>
+							{activeSection === "experience" ? t("Experience") : t("Education")}
+						</a>
 					</li>
 					<li>
 						<button onClick={toggleLanguageMenu}>
@@ -85,6 +91,10 @@ const Nav = () => {
 			</nav>
 		</header>
 	)
+}
+
+Nav.propTypes = {
+	activeSection: PropTypes.string,
 }
 
 export default Nav
