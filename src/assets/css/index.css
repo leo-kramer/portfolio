@@ -180,3 +180,8 @@ main > section {
 	-webkit-mask-image: url("/portfolio/img/icon-expand.svg");
 	mask-image: url("/portfolio/img/icon-expand.svg");
 }
+
+.share {
+	-webkit-mask-image: url("/portfolio/img/icon-share.svg");
+	mask-image: url("/portfolio/img/icon-share.svg");
+}

@@ -48,12 +48,18 @@ const ProjectCard = ({ img, name, deliverables, skills, code, demo }) => {
         <ul>
           {code && code.trim() !== "" && (
             <li>
-              <a href={code}>View code</a>
+              <a href={code}>
+                <div className="svg-mask github"></div>
+                View code
+              </a>
             </li>
           )}
           {demo && demo.trim() !== "" && (
             <li>
-              <a href={demo}>Live demo</a>
+              <a href={demo}>
+                <div className="svg-mask share"></div>
+                Live demo
+              </a>
             </li>
           )}
         </ul>
