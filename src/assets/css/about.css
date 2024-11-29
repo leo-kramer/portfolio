@@ -94,14 +94,3 @@ main > section:first-of-type > section:last-of-type > div p {
 	font-weight: bold;
 	margin: 0;
 }
-
-main > section:first-of-type > section:last-of-type > div a {
-	text-decoration: none;
-	color: var(--text-75);
-}
-
-main > section:first-of-type > section:last-of-type > div a:hover {
-	cursor: pointer;
-
-	color: var(--text);
-}
