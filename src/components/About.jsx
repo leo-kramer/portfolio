@@ -7,6 +7,15 @@ const About = () => {
 	const { t } = useTranslation()
 	const [count, setCount] = useState(1)
 
+	const RevealSpan = () => {
+		const Span = document.querySelector("main h1 > span")
+		Span.classList.add("show")
+
+		setTimeout(() => {
+			Span.classList.remove("show")
+		}, 1000)
+	}
+
 	return (
 		<section>
 			<section>
@@ -27,7 +36,9 @@ const About = () => {
 							/>
 						</button>
 						<div>
-							<h1>Leo Kramer</h1>
+							<h1 onClick={RevealSpan}>
+								Leo Kramer <span>👋</span>
+							</h1>
 							<h3>Front-end Developer</h3>
 						</div>
 					</div>

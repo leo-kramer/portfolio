@@ -26,7 +26,11 @@
 	--accent: #3f5033;
 	--text: #f7e6cf;
 	--background: #1c1812;
-	--text-gradient-accent: linear-gradient(to right, var(--text), var(--accent));
+	--text-gradient-accent: linear-gradient(
+		to right,
+		var(--text),
+		var(--accent) 80%
+	);
 	--primary-gradient-secondary: linear-gradient(
 		to right,
 		var(--primary),
@@ -76,16 +80,6 @@ html {
 
 	font-family: var(--default);
 	color: var(--text);
-}
-
-h1 {
-	background: var(--text-gradient-accent);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	font-size: var(--h1);
-	font-family: var(--headers);
-	font-weight: bold;
 }
 
 h2 {
