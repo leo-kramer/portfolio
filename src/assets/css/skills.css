@@ -78,11 +78,39 @@
 }
 
 .skill-card > div {
-	display: none;
-
 	border-radius: 0 0 10px 10px;
 
 	background-color: var(--secondary-5);
+}
+
+.skill-card > div.revealed {
+	animation: reveal-slide 0.5s ease-in-out 1 forwards;
+}
+
+.skill-card > div.hide {
+	animation: reveal-slide-reverse 0.5s ease-in-out 1 forwards;
+}
+
+.skill-card > div.display-none {
+	display: none;
+}
+
+@keyframes reveal-slide {
+	0% {
+		clip-path: inset(0 0 100% 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes reveal-slide-reverse {
+	0% {
+		clip-path: inset(0 0 0 0);
+	}
+	100% {
+		clip-path: inset(0 0 100% 0);
+	}
 }
 
 .skill-card > div > p {

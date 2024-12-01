@@ -8,14 +8,25 @@ const toggleDescription = (event) => {
 	const Logo = Button.querySelector("img")
 	const Parent = Button.closest("div")
 	const Description = Parent.querySelector("div")
-	Description.classList.toggle("show")
 
-	if (Description.classList.contains("show")) {
+	if (Description.classList.contains("revealed")) {
+		Description.classList.remove("revealed")
+		Description.classList.add("hide")
+		setTimeout(() => {
+			Description.classList.add("display-none")
+			Logo.classList.remove("no-filter")
+			Button.classList.remove("button-border-radius-description")
+		}, 500)
+	} else if (
+		Description.classList.contains("hide") ||
+		!Description.classList.contains("revealed")
+	) {
+		Description.classList.remove("display-none")
+		Description.classList.remove("hide")
+		Description.classList.add("revealed")
+
 		Logo.classList.add("no-filter")
 		Button.classList.add("button-border-radius-description")
-	} else {
-		Logo.classList.remove("no-filter")
-		Button.classList.remove("button-border-radius-description")
 	}
 }
 
@@ -28,7 +39,7 @@ const SkillCard = ({ logo, name, description }) => {
 				<img src={logo} alt={`${t("Logo alt text")} ${name}.`} />
 				<p>{name}</p>
 			</button>
-			<div>
+			<div className="display-none">
 				<p>{description}</p>
 			</div>
 		</div>
