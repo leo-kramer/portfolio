@@ -25,9 +25,16 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 	font-size: var(--h3);
 	color: var(--text);
 	background-color: var(--secondary-20);
+
+	transition: all 200ms ease-in-out;
 }
 
 #exp-edu > div > button.active {
+	color: var(--background);
+	background-color: var(--primary);
+}
+
+#exp-edu > div > button.active:hover {
 	color: var(--background);
 	background-color: var(--primary);
 }

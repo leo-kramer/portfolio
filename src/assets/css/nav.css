@@ -46,6 +46,8 @@ nav > ul > li {
 	min-width: 8em;
 
 	text-align: center;
+
+	transition: background-color 200ms ease-in-out;
 }
 
 nav > ul > li:hover {
@@ -63,10 +65,12 @@ nav > ul > li > button {
 	text-decoration: none;
 	color: var(--text-75);
 	background: none;
+
+	transition: color 200ms ease-in-out;
 }
 
-nav > ul > li > a:hover,
-nav > ul > li > button:hover {
+nav > ul > li:hover > a,
+nav > ul > li:hover > button {
 	cursor: pointer;
 
 	color: var(--text) !important;
@@ -100,6 +104,8 @@ nav > ul > li > button > div {
 	aspect-ratio: 1/1;
 
 	color: var(--text-75);
+
+	transition: color 200ms ease-in-out;
 }
 
 nav > ul > li > button:hover > div {
@@ -155,6 +161,8 @@ nav > div > ul > li > button {
 	font-size: 1em;
 	color: var(--text-75);
 	background: none;
+
+	transition: all 200ms ease-in-out;
 }
 
 nav > div > ul > li > button:hover {

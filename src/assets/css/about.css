@@ -73,6 +73,8 @@ h1 > span {
 	aspect-ratio: 1/1;
 
 	color: var(--text-75);
+
+	transition: all 200ms ease-in-out;
 }
 
 #about > ul > li:last-of-type > a:hover > div {

@@ -114,17 +114,14 @@ h1 {
 	background: var(--text-gradient-accent);
 	-webkit-background-clip: text;
 	background-clip: text;
-
-	transition: color 2ms;
 }
 
 h1:hover {
 	cursor: pointer;
 
-	color: var(--accent);
-	background: none;
-	-webkit-background-clip: border-box;
-	background-clip: border-box;
+	background: var(--accent);
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 h2 {
@@ -153,6 +150,8 @@ h5 {
 a {
 	text-decoration: none;
 	color: var(--text-75);
+
+	transition: color 200ms ease-in-out;
 }
 
 a:hover {
@@ -186,6 +185,8 @@ TOGGLEABLE CLASSES
 }
 
 .primary {
+	display: inline-block;
+
 	border: none;
 	border-radius: 10px;
 	padding: 0.5em 1em;
@@ -196,6 +197,8 @@ TOGGLEABLE CLASSES
 	text-decoration: none;
 	color: var(--background);
 	background-image: var(--primary-gradient-secondary);
+
+	transition: all 200ms ease-in-out;
 }
 
 .primary:hover {

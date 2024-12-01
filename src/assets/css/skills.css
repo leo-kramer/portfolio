@@ -48,6 +48,8 @@ SKILL CARD - HEADER
 	width: 100%;
 
 	background-color: var(--primary-5);
+
+	transition: background-color 200ms ease-in-out;
 }
 
 .skill-card > button:hover {
@@ -68,6 +70,8 @@ SKILL CARD - HEADER
 	height: 2.75em;
 
 	filter: contrast(75%) sepia(100%);
+
+	transition: all 200ms ease-in-out;
 }
 
 .skill-card > button:hover > img {

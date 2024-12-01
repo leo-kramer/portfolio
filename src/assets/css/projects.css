@@ -65,6 +65,8 @@ PROJECT CARD
 	aspect-ratio: 1/1;
 
 	color: var(--text-75);
+
+	transition: all 200ms ease-in-out;
 }
 
 .project-card > div > ul:last-of-type > li > a:hover > div {
