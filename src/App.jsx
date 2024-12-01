@@ -1,13 +1,34 @@
 // Components
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Nav from "./components/Nav.jsx"
 import About from "./components/About.jsx"
 import Skills from "./components/Skills.jsx"
 import Projects from "./components/Projects.jsx"
 import ExpEduMenu from "./components/ExpEduMenu.jsx"
+import Experience from "./components/Experience.jsx"
+import Education from "./components/Education.jsx"
 
 function App() {
 	const [activeSection, setActiveSection] = useState("experience")
+	const [isMobile, setIsMobile] = useState(false)
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 35 * 16) {
+				// 55em in pixels (assuming 1em = 16px)
+				setIsMobile(true)
+			} else {
+				setIsMobile(false)
+			}
+		}
+
+		handleResize() // Check initial size
+		window.addEventListener("resize", handleResize)
+
+		return () => {
+			window.removeEventListener("resize", handleResize)
+		}
+	})
 
 	return (
 		<div id="app-root">
@@ -17,7 +38,17 @@ function App() {
 				<section>
 					<Skills />
 					<Projects />
-					<ExpEduMenu setActiveSection={setActiveSection} />
+					{isMobile ? (
+						<section>
+							<h2>Experience</h2>
+							<Experience />
+
+							<h2>Education</h2>
+							<Education />
+						</section>
+					) : (
+						<ExpEduMenu setActiveSection={setActiveSection} />
+					)}
 				</section>
 			</main>
 		</div>

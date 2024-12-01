@@ -56,12 +56,26 @@ EXPERIENCE + EDUCATION - CARD
 	color: var(--text-75);
 }
 
-/* DESCRIPTION */
+/* TAGS */
 
-.experience-card > ul:last-of-type,
-.education-card > ul:last-of-type {
+.experience-card > ul:last-of-type {
 	display: flex;
 	gap: 0.5em;
 
 	list-style-type: none;
+}
+
+/* *************
+MEDIA QUERIES
+************* */
+
+@media screen and (max-width: 35em) {
+	.experience-card > div,
+	.education-card > div {
+		flex-direction: column;
+	}
+
+	.experience-card > ul:last-of-type {
+		justify-content: center;
+	}
 }

@@ -167,4 +167,15 @@ MEDIA QUERIES
 		width: fit-content;
 		max-width: 40em;
 	}
+
+	#about > ul {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 35em) {
+	#about > section:first-of-type > div {
+		flex-direction: column;
+		gap: 0;
+	}
 }
