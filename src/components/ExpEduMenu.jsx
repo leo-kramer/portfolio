@@ -22,7 +22,7 @@ const ExpEduMenu = ({ setActiveSection }) => {
 	}
 
 	return (
-		<section>
+		<section id="exp-edu">
 			<div>
 				<button
 					onClick={ShowExperience}

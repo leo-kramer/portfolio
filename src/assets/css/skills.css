@@ -1,3 +1,7 @@
+/* *************
+SKILLS
+************* */
+
 #skills {
 	display: flex;
 	flex-direction: column;
@@ -15,11 +19,14 @@
 
 #skills > div {
 	display: flex;
-	flex-direction: row;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1em;
-	justify-content: center;
 }
+
+/* *************
+SKILL CARD - HEADER
+************* */
 
 .skill-card {
 	width: 16em;
@@ -31,13 +38,12 @@
 
 .skill-card > button {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	gap: 1em;
 
-	padding: 0.5em;
 	border: none;
 	border-radius: 10px 10px;
+	padding: 0.5em;
 
 	width: 100%;
 
@@ -55,11 +61,12 @@
 }
 
 .skill-card > button > img {
-	width: 2.75em;
-	height: 2.75em;
+	border-radius: 5px;
 	object-fit: contain;
 
-	border-radius: 5px;
+	width: 2.75em;
+	height: 2.75em;
+
 	filter: contrast(75%) sepia(100%);
 }
 
@@ -77,6 +84,10 @@
 	font-weight: bold;
 	color: var(--text);
 }
+
+/* *************
+SKILL CARD - DESCRIPTION
+************* */
 
 .skill-card > div {
 	border-radius: 0 0 10px 10px;
@@ -96,6 +107,14 @@
 	display: none;
 }
 
+.skill-card > div > p {
+	padding: 0.5em 1em;
+}
+
+/* *************
+ANIMATIONS
+************* */
+
 @keyframes reveal-slide {
 	0% {
 		clip-path: inset(0 0 100% 0);
@@ -112,8 +131,4 @@
 	100% {
 		clip-path: inset(0 0 100% 0);
 	}
-}
-
-.skill-card > div > p {
-	padding: 0.5em 1em;
 }

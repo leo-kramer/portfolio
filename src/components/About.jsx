@@ -18,7 +18,7 @@ const About = () => {
 
 	return (
 		<section>
-			<section>
+			<section id="about">
 				<section>
 					<div>
 						<button
@@ -64,7 +64,7 @@ const About = () => {
 				</ul>
 			</section>
 
-			<section>
+			<section id="contact">
 				<h3>{t("Contact")}</h3>
 				<div>
 					<p>{t("E-mail")}</p>

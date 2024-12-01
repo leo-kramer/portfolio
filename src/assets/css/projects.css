@@ -1,22 +1,30 @@
+/* *************
+PROJECTS
+************* */
+
 #projects > div {
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
 }
 
+/* *************
+PROJECT CARD
+************* */
+
 .project-card {
 	display: flex;
-	flex-direction: row;
 	gap: 1em;
 
-	padding: 0.5em 0 0.5em 1em;
 	border-left: 2px solid var(--secondary);
+	padding: 0.5em 0 0.5em 1em;
 }
 
 .project-card > img {
+	border-radius: 10px;
+
 	width: 7em;
 	height: 7em;
-	border-radius: 10px;
 }
 
 .project-card > div > h5 {
@@ -27,6 +35,8 @@
 	margin: 0.5em 0;
 }
 
+/* Everything but description */
+
 .project-card > div > ul:not(:first-of-type) {
 	display: flex;
 	gap: 0.5em;
@@ -36,14 +46,7 @@
 	list-style-type: none;
 }
 
-.tag {
-	padding: 0.25em 0.75em;
-	border-radius: 10px;
-
-	background-color: var(--accent);
-	font-size: 12px;
-	color: var(--text);
-}
+/* Links */
 
 .project-card > div > ul:last-of-type {
 	gap: 1em;
@@ -55,13 +58,17 @@
 	gap: 0.25em;
 }
 
+/* Link icons */
+
 .project-card > div > ul:last-of-type > li > a > div {
 	height: 1em;
 	aspect-ratio: 1/1;
+
 	color: var(--text-75);
 }
 
 .project-card > div > ul:last-of-type > li > a:hover > div {
 	transform: scale(1.1);
+
 	color: var(--text);
 }

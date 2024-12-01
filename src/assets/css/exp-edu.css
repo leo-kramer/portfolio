@@ -1,3 +1,7 @@
+/* *************
+EXPERIENCE + EDUCATION - LAY-OUT
+************* */
+
 #experience,
 #education {
 	display: flex;
@@ -5,26 +9,34 @@
 	gap: 2em;
 }
 
+/* *************
+EXPERIENCE + EDUCATION - CARD
+************* */
+
 .experience-card,
 .education-card {
-	padding: 0.5em 0 0.5em 1em;
 	border-left: 2px solid var(--secondary);
+	padding: 0.5em 0 0.5em 1em;
 }
+
+/* HEADER */
 
 .experience-card > div,
 .education-card > div {
 	display: flex;
-	gap: 1em;
 	align-items: center;
+	gap: 1em;
 }
 
 .experience-card > div > img,
 .education-card > div > img {
+	border-radius: 360px;
+
 	width: 4em;
 	height: 4em;
-
-	border-radius: 360px;
 }
+
+/* HEADER - METADATA */
 
 .experience-card > div > div > h5,
 .education-card > div > div > h5 {
@@ -34,14 +46,17 @@
 .experience-card > div > div > p,
 .education-card > div > div > p {
 	margin: 0;
+
 	font-size: var(--h6);
 }
 
 .experience-card > div > div > p:last-of-type,
 .education-card > div > div > p:last-of-type {
-	color: var(--text-75);
 	font-size: var(--p);
+	color: var(--text-75);
 }
+
+/* DESCRIPTION */
 
 .experience-card > ul:last-of-type,
 .education-card > ul:last-of-type {

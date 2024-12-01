@@ -1,17 +1,116 @@
-header {
-	position: fixed;
-	top: 2em;
+/* *************
+NAV - LAY-OUT
+************* */
 
+header {
 	display: flex;
 	justify-content: center;
 	gap: 0;
 
+	position: fixed;
+	top: 2em;
+
 	width: 100vw;
+
 	z-index: 10;
 }
 
-/* Language selection menu */
-header > nav > div {
+/* *************
+NAV - MENU
+************* */
+
+nav > ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+
+	margin: 0;
+	border: 2px solid var(--secondary);
+	border-radius: 1em;
+	padding: 0.75em;
+
+	list-style: none;
+	background-color: var(--secondary-10);
+	-webkit-backdrop-filter: blur(0.5em);
+	backdrop-filter: blur(0.5em);
+}
+
+nav > ul > li {
+	flex-grow: 1;
+	flex-basis: 0;
+
+	border-radius: 1em;
+	padding: 0.75em;
+
+	min-width: 8em;
+
+	text-align: center;
+}
+
+nav > ul > li:hover {
+	background-color: var(--primary-10);
+}
+
+nav > ul > li > a,
+nav > ul > li > button {
+	margin: 0;
+	border: none;
+	padding: 0;
+
+	font-family: var(--default);
+	font-size: 1em;
+	text-decoration: none;
+	color: var(--text-75);
+	background: none;
+}
+
+nav > ul > li > a:hover,
+nav > ul > li > button:hover {
+	cursor: pointer;
+
+	color: var(--text) !important;
+}
+
+/* *************
+NAV - LANGUAGE SELECTION
+************* */
+
+nav > ul > li > button {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 0.5em;
+
+	min-width: 8em;
+}
+
+nav > ul > li > button > p {
+	margin: 0;
+
+	width: 100%;
+
+	text-align: left;
+}
+
+/* icons */
+
+nav > ul > li > button > div {
+	height: 1em;
+	aspect-ratio: 1/1;
+
+	color: var(--text-75);
+}
+
+nav > ul > li > button:hover > div {
+	color: var(--text);
+}
+
+/* *************
+NAV - LANGUAGE SELECTION - OVERLAY
+************* */
+
+nav > div {
 	display: none;
 	flex-direction: column;
 	align-items: center;
@@ -23,17 +122,17 @@ header > nav > div {
 	min-width: 8em;
 }
 
-header > nav > div > img {
+nav > div > img {
 	width: 2em;
 }
 
-header > nav > div > ul {
+nav > div > ul {
 	flex-direction: column;
 	gap: 0.25em;
 
-	padding: 0.5em 0.25em;
-	border-radius: 10px;
 	margin: 0;
+	border-radius: 10px;
+	padding: 0.5em 0.25em;
 
 	width: 100%;
 
@@ -41,11 +140,11 @@ header > nav > div > ul {
 	background-color: var(--accent);
 }
 
-header > nav > div > ul > li {
+nav > div > ul > li {
 	padding: 0;
 }
 
-header > nav > div > ul > li > button {
+nav > div > ul > li > button {
 	border: none;
 	border-radius: 10px;
 	padding: 0.5em 0.25em;
@@ -58,93 +157,9 @@ header > nav > div > ul > li > button {
 	background: none;
 }
 
-header > nav > div > ul > li > button:hover {
+nav > div > ul > li > button:hover {
 	cursor: pointer;
 
 	color: var(--text);
 	background-color: var(--background-25);
-}
-
-header > nav > ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 1em;
-
-	margin: 0;
-	padding: 0.75em;
-	border: 2px solid var(--secondary);
-	border-radius: 1em;
-
-	list-style: none;
-
-	background-color: var(--secondary-10);
-	-webkit-backdrop-filter: blur(0.5em);
-	backdrop-filter: blur(0.5em);
-}
-
-header > nav > ul > li {
-	flex-grow: 1;
-	flex-basis: 0;
-
-	padding: 0.75em;
-	border-radius: 1em;
-
-	min-width: 8em;
-
-	text-align: center;
-}
-
-header > nav > ul > li:hover {
-	background-color: var(--primary-10);
-}
-
-header > nav > ul > li > a,
-header > nav > ul > li > button {
-	margin: 0;
-	padding: 0;
-
-	border: none;
-
-	font-family: var(--default);
-	font-size: 1em;
-	text-decoration: none;
-	color: var(--text-75);
-	background: none;
-}
-
-header > nav > ul > li > button {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	gap: 0.5em;
-
-	min-width: 8em;
-}
-
-header > nav > ul > li > a:hover,
-header > nav > ul > li > button:hover {
-	cursor: pointer;
-
-	color: var(--text) !important;
-}
-
-header > nav > ul > li > button > div {
-	height: 1em;
-	aspect-ratio: 1/1;
-
-	color: var(--text-75);
-}
-
-header > nav > ul > li > button:hover > div {
-	color: var(--text);
-}
-
-header > nav > ul > li > button > p {
-	margin: 0;
-
-	width: 100%;
-	text-align: left;
 }
