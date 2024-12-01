@@ -17,6 +17,12 @@ header {
 NAV - MENU
 ************* */
 
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
 nav > ul {
 	display: flex;
 	justify-content: center;
@@ -120,10 +126,10 @@ nav > div {
 	align-items: center;
 
 	position: relative;
-	float: right;
 	right: 1em;
 
 	min-width: 8em;
+	width: fit-content;
 }
 
 nav > div > img {
@@ -178,6 +184,23 @@ MEDIA QUERIES
 	header {
 		top: auto;
 		bottom: 2em;
+	}
+
+	nav > div {
+		order: 1;
+	}
+
+	nav > div > img {
+		align-self: flex-end;
+		order: 2;
+
+		position: relative;
+		right: 0.25em;
+		transform: scaleY(-1);
+	}
+
+	nav > ul {
+		order: 2;
 	}
 
 	nav > ul > li {
