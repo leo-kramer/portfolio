@@ -7,6 +7,7 @@ import "../assets/css/nav.css"
 const Nav = ({ activeSection }) => {
 	const { t, i18n } = useTranslation()
 	const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
+	const [isMobile, setIsMobile] = useState(false)
 	const languageMenuRef = useRef(null)
 
 	const toggleLanguageMenu = () => {
@@ -22,6 +23,18 @@ const Nav = ({ activeSection }) => {
 			}
 		}
 
+		const handleResize = () => {
+			if (window.innerWidth <= 55 * 16) {
+				// 55em in pixels (assuming 1em = 16px)
+				setIsMobile(true)
+			} else {
+				setIsMobile(false)
+			}
+		}
+
+		handleResize() // Check initial size
+		window.addEventListener("resize", handleResize)
+
 		// Delay useEffect operations to allow setIsLanguageMenuOpen to update
 		const timeoutId = setTimeout(() => {
 			if (isLanguageMenuOpen) {
@@ -34,6 +47,7 @@ const Nav = ({ activeSection }) => {
 		return () => {
 			clearTimeout(timeoutId)
 			document.removeEventListener("click", handleClickOutside)
+			window.removeEventListener("resize", handleResize)
 		}
 	}, [isLanguageMenuOpen])
 
@@ -48,28 +62,49 @@ const Nav = ({ activeSection }) => {
 			<nav>
 				<ul>
 					<li>
-						<a href="#top">{t("Home")}</a>
-					</li>
-					<li>
-						<a href="#skills">{t("Skills")}</a>
-					</li>
-					<li>
-						<a href="#projects">{t("Projects")}</a>
-					</li>
-					{/* <li>
-						<a href="#experience">{t("Experience")}</a>
-					</li> */}
-					<li>
-						<a href={`#${activeSection}`}>
-							{activeSection === "experience" ? t("Experience") : t("Education")}
+						<a href="#top">
+							{isMobile ? <div className="svg-mask home"></div> : t("Home")}
 						</a>
 					</li>
 					<li>
-						<button onClick={toggleLanguageMenu}>
-							<div className="svg-mask language"></div>
-							<p>{t("LNG")}</p>
-							<div className="svg-mask expand"></div>
-						</button>
+						<a href="#skills">
+							{isMobile ? <div className="svg-mask skills"></div> : t("Skills")}
+						</a>
+					</li>
+					<li>
+						<a href="#projects">
+							{isMobile ? <div className="svg-mask projects"></div> : t("Projects")}
+						</a>
+					</li>
+					<li>
+						<a href={`#${activeSection}`}>
+							{isMobile ? (
+								activeSection === "experience" ? (
+									<div className="svg-mask experience"></div>
+								) : (
+									<div className="svg-mask education"></div>
+								)
+							) : activeSection === "experience" ? (
+								t("Experience")
+							) : (
+								t("Education")
+							)}
+						</a>
+					</li>
+					<li>
+						{isMobile ? (
+							<button onClick={toggleLanguageMenu}>
+								<div className="svg-mask language"></div>
+							</button>
+						) : (
+							<button onClick={toggleLanguageMenu}>
+								<div className="svg-mask language"></div>
+								<p>{t("LNG")}</p>
+								<div
+									className={`svg-mask ${isLanguageMenuOpen ? "collapse" : "expand"}`}
+								></div>
+							</button>
+						)}
 					</li>
 				</ul>
 

@@ -223,12 +223,17 @@ TOGGLEABLE CLASSES
 PAGE LAY-OUT
 ************* */
 
+#app-root {
+	display: flex;
+	justify-content: center;
+}
+
 main {
 	display: flex;
 	justify-content: center;
 	gap: 4em;
 
-	margin: 8em auto 8em auto;
+	margin: 8em 4em 8em 4em;
 
 	max-width: 90em;
 }
@@ -263,14 +268,29 @@ SVG MASKS
 	mask-position: center;
 }
 
-.github {
-	-webkit-mask-image: url("/portfolio/img/icon-github.svg");
-	mask-image: url("/portfolio/img/icon-github.svg");
+.home {
+	-webkit-mask-image: url("/portfolio/img/icon-home.svg");
+	mask-image: url("/portfolio/img/icon-home.svg");
 }
 
-.linkedin {
-	-webkit-mask-image: url("/portfolio/img/icon-linkedin.svg");
-	mask-image: url("/portfolio/img/icon-linkedin.svg");
+.skills {
+	-webkit-mask-image: url("/portfolio/img/icon-skills.svg");
+	mask-image: url("/portfolio/img/icon-skills.svg");
+}
+
+.projects {
+	-webkit-mask-image: url("/portfolio/img/icon-projects.svg");
+	mask-image: url("/portfolio/img/icon-projects.svg");
+}
+
+.experience {
+	-webkit-mask-image: url("/portfolio/img/icon-experience.svg");
+	mask-image: url("/portfolio/img/icon-experience.svg");
+}
+
+.education {
+	-webkit-mask-image: url("/portfolio/img/icon-education.svg");
+	mask-image: url("/portfolio/img/icon-education.svg");
 }
 
 .language {
@@ -283,7 +303,47 @@ SVG MASKS
 	mask-image: url("/portfolio/img/icon-expand.svg");
 }
 
+.collapse {
+	-webkit-mask-image: url("/portfolio/img/icon-collapse.svg");
+	mask-image: url("/portfolio/img/icon-collapse.svg");
+}
+
 .share {
 	-webkit-mask-image: url("/portfolio/img/icon-share.svg");
 	mask-image: url("/portfolio/img/icon-share.svg");
+}
+
+.github {
+	-webkit-mask-image: url("/portfolio/img/icon-github.svg");
+	mask-image: url("/portfolio/img/icon-github.svg");
+}
+
+.linkedin {
+	-webkit-mask-image: url("/portfolio/img/icon-linkedin.svg");
+	mask-image: url("/portfolio/img/icon-linkedin.svg");
+}
+
+/* *************
+MEDIA QUERIES
+************* */
+
+@media screen and (max-width: 75em) {
+	main {
+		flex-direction: column;
+	}
+
+	main > section:first-of-type {
+		align-items: center;
+
+		position: relative;
+		top: 0em;
+
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 55em) {
+	main {
+		margin-top: 4em;
+	}
 }

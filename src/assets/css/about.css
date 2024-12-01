@@ -157,3 +157,14 @@ ANIMATIONS
 		box-shadow: 0px 0px 255px 1em var(--primary-50);
 	}
 }
+
+/* *************
+MEDIA QUERIES
+************* */
+
+@media screen and (max-width: 75em) {
+	#about {
+		width: fit-content;
+		max-width: 40em;
+	}
+}

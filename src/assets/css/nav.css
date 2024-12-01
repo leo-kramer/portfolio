@@ -10,8 +10,6 @@ header {
 	position: fixed;
 	top: 2em;
 
-	width: 100vw;
-
 	z-index: 10;
 }
 
@@ -170,4 +168,31 @@ nav > div > ul > li > button:hover {
 
 	color: var(--text);
 	background-color: var(--background-25);
+}
+
+/* *************
+MEDIA QUERIES
+************* */
+
+@media screen and (max-width: 55em) {
+	header {
+		top: auto;
+		bottom: 2em;
+	}
+
+	nav > ul > li {
+		display: flex;
+		justify-content: center;
+	}
+
+	nav > ul > li,
+	nav > ul > li > button {
+		min-width: fit-content;
+	}
+
+	nav > ul > li > a > div,
+	nav > ul > li > button > div {
+		height: 1.5em;
+		aspect-ratio: 1/1;
+	}
 }

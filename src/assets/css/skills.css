@@ -100,11 +100,11 @@ SKILL CARD - DESCRIPTION
 }
 
 .skill-card > div.revealed {
-	animation: reveal-slide 0.5s ease-in-out 1 forwards;
+	animation: reveal-slide 0.5s linear 1 forwards;
 }
 
 .skill-card > div.hide {
-	animation: reveal-slide-reverse 0.5s ease-in-out 1 forwards;
+	animation: reveal-slide-reverse 0.5s linear 1 forwards;
 }
 
 .skill-card > div.display-none {

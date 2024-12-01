@@ -48,11 +48,8 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 }
 
 #exp-edu > div > div > button.active {
-	color: var(--background);
-	background-color: var(--primary);
-}
+	pointer-events: none;
 
-#exp-edu > div > div > button.active:hover {
 	color: var(--background);
 	background-color: var(--primary);
 }

@@ -36,9 +36,7 @@ const About = () => {
 							/>
 						</button>
 						<div>
-							<h1 onClick={RevealSpan}>
-								Leo Kramer <span>👋</span>
-							</h1>
+							<h1 onClick={RevealSpan}>Leo Kramer {/*<span>👋</span>*/}</h1>
 							<h3>Front-end Developer</h3>
 						</div>
 					</div>
