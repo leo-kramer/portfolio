@@ -60,6 +60,7 @@ EXPERIENCE + EDUCATION - CARD
 
 .experience-card > ul:last-of-type {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 0.5em;
 
 	list-style-type: none;

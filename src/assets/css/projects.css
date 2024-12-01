@@ -39,6 +39,7 @@ PROJECT CARD
 
 .project-card > div > ul:not(:first-of-type) {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 0.5em;
 
 	padding: 0;
