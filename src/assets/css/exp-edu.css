@@ -34,7 +34,7 @@
 .experience-card > div > div > p,
 .education-card > div > div > p {
 	margin: 0;
-	font-size: 18px;
+	font-size: var(--h6);
 }
 
 .experience-card > div > div > p:last-of-type,

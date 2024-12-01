@@ -72,7 +72,8 @@
 }
 
 .skill-card > button > p {
-	font-size: 18px;
+	font-family: var(--default);
+	font-size: var(--h6);
 	font-weight: bold;
 	color: var(--text);
 }
