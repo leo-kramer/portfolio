@@ -3,8 +3,6 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 ************* */
 
 #exp-edu > div {
-	display: flex;
-
 	margin: 2em 0 1em 0;
 	border-radius: 10px;
 	padding: 0.5em;
@@ -13,7 +11,27 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 	background-color: var(--secondary-20-onbg);
 }
 
-#exp-edu > div > button {
+#exp-edu > div > div {
+	pointer-events: none;
+
+	display: flex;
+
+	border-radius: 10px;
+
+	width: 100%;
+
+	background-color: var(--secondary-20);
+
+	transition: all 200ms ease-in-out;
+}
+
+#exp-edu > div > div:hover {
+	background-color: var(--secondary);
+}
+
+#exp-edu > div > div > button {
+	pointer-events: auto;
+
 	flex-basis: 50%;
 
 	border: none;
@@ -24,24 +42,23 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 	font-weight: bold;
 	font-size: var(--h3);
 	color: var(--text);
-	background-color: var(--secondary-20);
+	background: none;
 
-	transition: all 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
 }
 
-#exp-edu > div > button.active {
+#exp-edu > div > div > button.active {
 	color: var(--background);
 	background-color: var(--primary);
 }
 
-#exp-edu > div > button.active:hover {
+#exp-edu > div > div > button.active:hover {
 	color: var(--background);
 	background-color: var(--primary);
 }
 
-#exp-edu > div > button:hover {
+#exp-edu > div > div > button:hover {
 	cursor: pointer;
 
 	color: var(--background);
-	background-color: var(--secondary);
 }

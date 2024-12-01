@@ -24,18 +24,22 @@ const ExpEduMenu = ({ setActiveSection }) => {
 	return (
 		<section id="exp-edu">
 			<div>
-				<button
-					onClick={ShowExperience}
-					className={showing === "experience" ? "active" : ""}
-				>
-					{t("Experience")}
-				</button>
-				<button
-					onClick={ShowEducation}
-					className={showing === "education" ? "active" : ""}
-				>
-					{t("Education")}
-				</button>
+				<div>
+					{" "}
+					{/* For the background */}
+					<button
+						onClick={ShowExperience}
+						className={showing === "experience" ? "active" : ""}
+					>
+						{t("Experience")}
+					</button>
+					<button
+						onClick={ShowEducation}
+						className={showing === "education" ? "active" : ""}
+					>
+						{t("Education")}
+					</button>
+				</div>
 			</div>
 			{showing === "experience" && <Experience />}
 			{showing === "education" && <Education />}
