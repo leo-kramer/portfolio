@@ -4,6 +4,41 @@ import PropTypes from "prop-types"
 import "../assets/css/index.css"
 import "../assets/css/nav.css"
 
+const setActiveNavItem = () => {
+	const items = document.querySelectorAll("nav > ul > li:not(:last-of-type)")
+	const links = document.querySelectorAll("nav > ul > li:not(:last-of-type) > a")
+
+	links.forEach((link, index) => {
+		const sectionID = link.href.split("#")[1]
+		const section = document.getElementById(sectionID)
+
+		if (section) {
+			const position = section.getBoundingClientRect()
+
+			if (
+				position.top >= 0 &&
+				position.bottom <=
+					(window.innerHeight || document.documentElement.clientHeight)
+			) {
+				items[index].classList.add("active")
+			} else {
+				items[index].classList.remove("active")
+			}
+		}
+	})
+
+	items.forEach((item) => {
+		console.log(item)
+		if (!item.classList.contains("active")) {
+			item.classList.remove("active")
+			items[0].classList.add("active")
+		} else if (window.pageYOffset <= 64) {
+			item.classList.remove("active")
+			items[0].classList.add("active")
+		}
+	})
+}
+
 const Nav = ({ activeSection }) => {
 	const { t, i18n } = useTranslation()
 	const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
@@ -25,14 +60,14 @@ const Nav = ({ activeSection }) => {
 
 		const handleResize = () => {
 			if (window.innerWidth <= 55 * 16) {
-				// 55em in pixels (assuming 1em = 16px)
+				// 55em in pixels
 				setIsMobile(true)
 			} else {
 				setIsMobile(false)
 			}
 		}
 
-		handleResize() // Check initial size
+		handleResize()
 		window.addEventListener("resize", handleResize)
 
 		// Delay useEffect operations to allow setIsLanguageMenuOpen to update
@@ -56,6 +91,8 @@ const Nav = ({ activeSection }) => {
 		const LanguageMenu = languageMenuRef.current
 		LanguageMenu.classList.remove("show-flex")
 	}
+
+	window.addEventListener("scroll", setActiveNavItem)
 
 	return (
 		<header>

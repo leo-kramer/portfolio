@@ -54,7 +54,8 @@ nav > ul > li {
 	transition: background-color 200ms ease-in-out;
 }
 
-nav > ul > li:hover {
+nav > ul > li:hover,
+nav > ul > li.active {
 	background-color: var(--primary-10);
 }
 
