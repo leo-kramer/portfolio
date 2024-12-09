@@ -8,35 +8,46 @@ const setActiveNavItem = () => {
 	const items = document.querySelectorAll("nav > ul > li:not(:last-of-type)")
 	const links = document.querySelectorAll("nav > ul > li:not(:last-of-type) > a")
 
-	links.forEach((link, index) => {
-		const sectionID = link.href.split("#")[1]
+	// Flag to check if a section has been marked as active, else make home active
+	let sectionActive = false
+
+	// For loop used to break out of loop (forEach does not allow that)
+	for (let index = 0; index < links.length; index++) {
+		const link = links[index]
+		const sectionID = link.href.split("#")[1] // split creates array before and after #, grab the ID listed after
 		const section = document.getElementById(sectionID)
 
 		if (section) {
 			const position = section.getBoundingClientRect()
+			const partialHeight = position.height * 0.25
 
+			// Since big screens have sections on top, add a 3em buffer before setting sections to active
+			if (window.scrollY <= 48) {
+				items[index].classList.remove("active")
+				break
+			}
+
+			// If section is completely visible in the viewport OR 25% of the bottom is visible
 			if (
-				position.top >= 0 &&
-				position.bottom <=
-					(window.innerHeight || document.documentElement.clientHeight)
+				(position.top >= 0 && position.bottom <= window.innerHeight) ||
+				(position.top < 0 && position.bottom > partialHeight)
 			) {
+				sectionActive = true
+				// Make sure all sections are not marked as active
+				items.forEach((item) => item.classList.remove("active"))
 				items[index].classList.add("active")
+				break // Break to make sure only one section can get class active
 			} else {
 				items[index].classList.remove("active")
 			}
 		}
-	})
+	}
 
-	items.forEach((item) => {
-		console.log(item)
-		if (!item.classList.contains("active")) {
-			item.classList.remove("active")
-			items[0].classList.add("active")
-		} else if (window.pageYOffset <= 64) {
-			item.classList.remove("active")
-			items[0].classList.add("active")
-		}
-	})
+	if (sectionActive) {
+		items[0].classList.remove("active")
+	} else {
+		items[0].classList.add("active")
+	}
 }
 
 const Nav = ({ activeSection }) => {
@@ -128,7 +139,7 @@ const Nav = ({ activeSection }) => {
 							)}
 						</a>
 					</li>
-					<li>
+					<li className={isLanguageMenuOpen ? "active" : ""}>
 						{isMobile ? (
 							<button onClick={toggleLanguageMenu}>
 								<div className="svg-mask language"></div>

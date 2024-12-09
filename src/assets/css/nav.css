@@ -35,9 +35,9 @@ nav > ul {
 	padding: 0.75em;
 
 	list-style: none;
-	background-color: var(--secondary-10);
-	-webkit-backdrop-filter: blur(0.5em);
-	backdrop-filter: blur(0.5em);
+	background-color: var(--secondary-20);
+	-webkit-backdrop-filter: blur(1em);
+	backdrop-filter: blur(1em);
 }
 
 nav > ul > li {
@@ -75,7 +75,9 @@ nav > ul > li > button {
 }
 
 nav > ul > li:hover > a,
-nav > ul > li:hover > button {
+nav > ul > li.active > a,
+nav > ul > li:hover > button,
+nav > ul > li.active > button {
 	cursor: pointer;
 
 	color: var(--text) !important;
@@ -113,7 +115,8 @@ nav > ul > li > button > div {
 	transition: color 200ms ease-in-out;
 }
 
-nav > ul > li > button:hover > div {
+nav > ul > li > button:hover > div,
+nav > ul > li.active > button > div {
 	color: var(--text);
 }
 
