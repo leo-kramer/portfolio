@@ -57,7 +57,7 @@ const ExpEduMenu = ({ setActiveSection }) => {
 						<button onClick={toggleSection}>
 							<div
 								style={{
-									transform: `translateX(${showing === "experience" ? 0 : 1.5}em)`, // Adjust position based on index
+									transform: `translateX(${showing === "experience" ? 0 : 100}%)`, // Adjust position based on index
 									transition: "transform 300ms ease-in-out",
 								}}
 							></div>

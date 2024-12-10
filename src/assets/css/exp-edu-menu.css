@@ -98,7 +98,7 @@ MEDIA QUERIES
 		border-radius: 360px;
 		padding: 0;
 
-		width: 3em;
+		width: calc(2 * 1em + 0.5vw);
 		height: fit-content;
 
 		background: var(--secondary-20);
@@ -122,8 +122,8 @@ MEDIA QUERIES
 	#exp-edu > div > div > button > div {
 		border-radius: 360px;
 
-		width: 1.5em;
-		height: 1.5em;
+		width: calc(1em + 0.5vw);
+		height: calc(1em + 0.5vw);
 
 		background-color: var(--primary);
 		transition: all 200ms ease-in-out;
