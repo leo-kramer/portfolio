@@ -59,3 +59,82 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 
 	color: var(--background);
 }
+
+/* *************
+MEDIA QUERIES
+************* */
+
+@media screen and (max-width: 35em) {
+	#exp-edu > div {
+		margin: 2em 0 1em 0;
+		border-radius: 0;
+		padding: 0;
+		box-shadow: none;
+
+		background: none;
+	}
+
+	#exp-edu > div > div {
+		pointer-events: auto;
+
+		justify-content: space-between;
+		align-items: center;
+
+		width: 100%;
+
+		background: none;
+	}
+
+	#exp-edu > div > div:hover {
+		background: none;
+	}
+
+	#exp-edu > div > div > button {
+		cursor: pointer;
+
+		flex-basis: inherit;
+
+		border: none;
+		border-radius: 360px;
+		padding: 0;
+
+		width: 3em;
+		height: fit-content;
+
+		background: var(--secondary-20);
+
+		transition: background-color 200ms ease-in-out;
+	}
+
+	#exp-edu > div > div > button.active {
+		pointer-events: auto;
+
+		color: var(--text);
+		background: none;
+	}
+
+	#exp-edu > div > div > button:hover {
+		cursor: pointer;
+
+		background-color: var(--secondary);
+	}
+
+	#exp-edu > div > div > button > div {
+		border-radius: 360px;
+
+		width: 1.5em;
+		height: 1.5em;
+
+		background-color: var(--primary);
+		transition: all 200ms ease-in-out;
+	}
+
+	/* #exp-edu > div > div > button:hover > div {
+		border-radius: 360px;
+
+		width: 1em;
+		height: 1em;
+
+		background-color: var(--accent);
+	} */
+}

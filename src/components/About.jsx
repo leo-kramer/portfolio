@@ -36,7 +36,7 @@ const About = () => {
 									// Styling to create slide animation
 									style={{
 										transform: `translateX(${(index - currentIndex) * 8}em)`, // Adjust position based on index
-										transition: "transform 1s ease-in-out", // Apply smooth transition
+										transition: "transform 1s ease-in-out",
 									}}
 								/>
 							))}
