@@ -8,7 +8,7 @@ EXPERIENCE + EDUCATION MENU - LAY-OUT
 	padding: 0.5em;
 	box-shadow: 0 0 10em var(--primary);
 
-	background-color: var(--secondary-20-onbg);
+	background-color: var(--primary-5-onbg);
 }
 
 #exp-edu > div > div {

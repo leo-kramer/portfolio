@@ -59,8 +59,10 @@ VARIABLES
 
 	/* shades */
 	--primary-50: rgba(var(--primary-RGB), 0.5);
+	--primary-20: rgba(var(--primary-RGB), 0.2);
 	--primary-10: rgba(var(--primary-RGB), 0.1);
 	--primary-5: rgba(var(--primary-RGB), 0.05);
+	--primary-5-onbg: #252018;
 	--primary-dark: #c2b8ab;
 	--secondary-40: rgba(var(--secondary-RGB), 0.4);
 	--secondary-20: rgba(var(--secondary-RGB), 0.2);
