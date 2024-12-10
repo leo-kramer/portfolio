@@ -24,18 +24,27 @@ h1 > span {
 }
 
 #about > section > div > button {
+	position: relative;
+
+	overflow: hidden;
+
 	border: none;
-
-	background: none;
-}
-
-#about > section > div > button > img {
 	border-radius: 360px;
 
 	width: 8em;
 	height: 8em;
 
+	background: none;
 	animation: img-glow 3s ease-in-out infinite alternate;
+}
+
+#about > section > div > button > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 8em;
+	height: 8em;
 }
 
 #about > section > div > button > img:hover {

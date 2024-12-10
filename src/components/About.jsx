@@ -5,7 +5,7 @@ import "../assets/css/about.css"
 
 const About = () => {
 	const { t } = useTranslation()
-	const [count, setCount] = useState(1)
+	const [currentIndex, setCurrentIndex] = useState(0)
 
 	const RevealSpan = () => {
 		const Span = document.querySelector("main h1 > span")
@@ -16,25 +16,32 @@ const About = () => {
 		}, 1000)
 	}
 
+	const nextImg = () => {
+		// Cycle through images
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % 3)
+	}
+
 	return (
 		<section>
 			<section id="about">
 				<section>
 					<div>
-						<button
-							onClick={() => {
-								if (count === 3) {
-									setCount(1)
-								} else {
-									setCount(count + 1)
-								}
-							}}
-						>
-							<img
-								src={`/portfolio/img/pfp-${count}.jpg`}
-								alt={t(`About img${count} alt text`)}
-							/>
+						<button onClick={nextImg}>
+							{/* Create an empty array since we only need to work with the index */}
+							{[...Array(3)].map((_, index) => (
+								<img
+									key={index}
+									src={`/portfolio/img/pfp-${index + 1}.jpg`}
+									alt={t(`About img${index + 1} alt text`)}
+									// Styling to create slide animation
+									style={{
+										transform: `translateX(${(index - currentIndex) * 8}em)`, // Adjust position based on index
+										transition: "transform 1s ease-in-out", // Apply smooth transition
+									}}
+								/>
+							))}
 						</button>
+
 						<div>
 							<h1 onClick={RevealSpan}>Leo Kramer {/*<span>👋</span>*/}</h1>
 							<h3>Front-end Developer</h3>
